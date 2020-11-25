@@ -1,0 +1,148 @@
+html.scroll-prevent{
+    position: fixed;
+}
+
+body{
+    background-color: bisque;
+    background: radial-gradient(white, bisque) fixed;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+header{
+    background: linear-gradient(-135deg, #E4A972, tomato);
+    box-shadow:0px 0px 3px;
+    border-bottom:1px solid #ccc;
+}
+
+header nav{
+    display: flex;
+}
+
+header nav h1{
+    margin-top: 0;
+    margin-bottom: 0; 
+    font-size: 50px;
+    padding-left: 20px;
+    font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
+}
+
+header nav h1 a{
+    color: aliceblue;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+header nav ul li{
+    margin-left: 1rem;
+}
+
+header nav ul li:not(:last-child){
+    padding-right: 1rem;
+    border-right: 2px solid #000;
+}
+
+header nav ul li a:hover{
+    color: rgb(0, 255, 98);
+    border-bottom:2px solid rgb(0, 255, 98);
+}
+
+main a:hover{
+    color: rgb(0, 255, 98);
+    border-bottom:2px solid rgb(0, 255, 98);
+}
+
+main h2{
+    text-align: center;
+}
+
+@media screen and (max-width: 480px){
+    /* 画面サイズが480px以下の場合ここの記述が適用される */
+
+    header nav ul{
+        position: fixed;
+        z-index: 10;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    header nav ul.open{
+        display: block;
+    }
+
+    header nav ul.open li{
+        margin: 2em;
+    }
+
+    header nav ul.open li a{
+        color: white;
+    }
+
+    header nav ul.close{
+        display: none;
+    }
+    header nav ul.close li a{
+        color: white;
+    }
+
+    header nav .nav-button{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: 20px;
+        display: block;
+        cursor: pointer;
+        z-index: 20;
+        position: relative;
+        width: 40px;
+        height: 30px;
+        border: 4px solid aliceblue;
+        border-radius: 5px;
+        box-shadow:0px 0px 3px;
+    }
+    header nav .nav-button span{
+        position: absolute;
+        left: 12.5%;
+        width: 75%;
+        height: 2px;
+        background-color: aliceblue;
+        border-radius: 2px;
+        transition: all 700ms;
+        box-shadow:0px 0px 3px;
+    }
+    header nav .nav-button span:nth-of-type(1){
+        top: 5px;
+    }
+    header nav .nav-button span:nth-of-type(2){
+        top: 14px;
+    }
+    header nav .nav-button span:nth-of-type(3){
+        top: 23px;
+    }
+
+    header nav .nav-button.active span:nth-of-type(1){
+        transform: translateY(9px) rotate(-45deg);
+    }
+
+    header nav .nav-button.active span:nth-of-type(2){
+        opacity: 0;
+    }
+
+    header nav .nav-button.active span:nth-of-type(3){
+        transform: translateY(-9px) rotate(45deg);
+    }
+}

@@ -1,0 +1,17 @@
+main .container .loginform{
+    width: 30%;
+    min-width: 300px;
+    background-color: rgb(248, 254, 255);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    box-shadow:0px 0px 3px inset;
+    border:1px solid rgb(255, 202, 202);
+}
+
+main .container .to_signup{
+    margin-top: 50px;
+    text-align: center;
+}

@@ -1,0 +1,91 @@
+main .result_message .success{
+    text-align: center;
+    width: 50%;
+    padding: 0.5rem 1rem;
+    margin: 2rem auto;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+main .result_message .failed{
+    text-align: center;
+    width: 50%;
+    padding: 0.5rem 1rem;
+    margin: 2rem auto;
+    font-weight: bold;
+    color: #d36060;/*文字色*/
+    background: #FFF;
+    border: solid 3px #d36060;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+main .movie_list ul{
+    list-style: none;
+    padding-left: 0%;
+}
+
+main .movie_list ul li{
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 70%;
+    margin-bottom: 30px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background: #FFF;
+    border: solid 2px #60d394;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+main .movie_list ul li .side_left .thumbnail img{
+    width: 100%;
+    height: auto;
+}
+
+main .movie_list ul li .side_right{
+    width: 100%;
+    margin-left: 10%;
+}
+
+main .movie_list ul li .side_right .title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+main .movie_list ul li .side_right .summary{
+    color: rgb(175, 174, 174);
+    font-size: 0.8rem;
+}
+
+main .movie_list ul li .side_right .deletelink{
+    position: absolute;
+    text-align: right;
+    right: 10px;
+    bottom: 10px;
+    font-size: 0.3rem;
+}
+
+@media screen and (max-width:480px){
+    /* 画面サイズが480px以下の場合ここの記述が適用される */
+
+    main .movie_list ul{
+        text-align: center;
+    }
+
+    main .movie_list ul li{
+        display: inline-block;
+    }
+
+    main .movie_list ul li .side_right{
+        margin-left: 0;
+    }
+
+    main .movie_list ul li .side_right .summary{
+        display: none;
+    }
+}

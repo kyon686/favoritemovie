@@ -1,0 +1,15 @@
+main .container .movie_play{
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+main .container .movie_play iframe{
+    position: absolute;
+    top: 5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+}
